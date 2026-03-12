@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>To-do-List</title>
+</head>
+
+<body>
+    <section>
+        <nav class="nav-bar bg-cyan-900 p-5">
+            <h1 class="font-sans font-bold text-4xl text-white">To-do-List</h1>
+        </nav>
+        <div class="main flex">
+
+            <div class="container bg-emerald-800 w-75 m-2 p-5 rounded-md ">
+                <h1 class="font-bold text-white text-2xl">The Great Gatsby </h1>
+                <h2 class="font-semibold text-white mt-3">F. Scott Fitzgerald </h2>
+                <p class="text-white mt-2">The Great Gatsby, published in 1925 by F. Scott Fitzgerald, is a classic American novel set on Long
+                    Island during the Jazz Age. Narrated by Nick Carraway, the story follows mysterious millionaire Jay
+                    Gatsby and his obsessive pursuit of Daisy Buchanan, exploring themes of wealth, love, and the American
+                    Dream's decay</p>
+                    <div class="flex justify-between">
+
+                        <button class="edit bg-green-200 font-semibold mt-3 p-2 rounded-xl hover:cursor-pointer">Edit</button>
+                    <button class=" remove bg-green-200 font-semibold p-2 mt-3 rounded-xl hover:cursor-pointer">Delete</button>
+                    </div>
+            </div>
+        </div>
+
+    <button class="w-16 h-16 bg-emerald-900 text-white flex items-center justify-center rounded-full absolute bottom-10 right-10 text-3xl z-20 add-pop-up hover:cursor-pointer">+</button>
+      <div class="add-overlay-btn fixed inset-0 bg-black opacity-40 hidden"></div>
+      <div class=" flex items-center justify-center fixed inset-0 hidden main-pop-up">
+          <div class="z-20  bg-emerald-900 w-200 p-5  rounded-2xl" >
+         <form class="flex flex-col leading-10 text-white p-7">
+          <label class="font-bold text-2xl">Author-title</label>
+          <input type="text" id="author-title" placeholder="Author-title" class="border-0 outline-0 border-b-2 border-white">
+           <label for="author-title">Author-name</label>
+          <input type="text" id="author-name" placeholder="Author-name" class="border-0 outline-0 border-b-2 border-white">
+          <label>Description</label>
+          <textarea  id="description" placeholder="Enter description" class="border outline-0  border-white px-1 w-full"></textarea>
+          <div class="flex gap-4 mt-4 justify-start align-middle">
+              <button id="add" class="bg-green-700 px-4 py-2  text-white rounded-xl font-bold text-[15px] hover:cursor-pointer">Add</button>
+              <button id="cancel" class="bg-green-700 px-4 py-2  text-white rounded-xl font-bold text-[15px] hover:cursor-pointer">Cancel</button>
+          </div>
+         </form>
+          </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
